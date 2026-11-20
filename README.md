@@ -1,23 +1,21 @@
 # sentimia
 
-Résolution d'équations non linéaires et application à l'hydraulique.
+Solving nonlinear equations and application to hydraulics.
 
-Package R réalisé par **Jemima Nkama**, dans le cadre du cours d'introduction
-à R, sous la supervision de **Mr Yvan Ngneunmeu**.
+R package created **Jemima Nkama**, as part of the introduction to R course, under the supervision of **Mr Yvan Ngneunmeu**.
 
-## Contenu
+## Contents
 
-- `bissection()`, `point_fixe()`, `newton()`, `secante()` : quatre méthodes
-  pour résoudre f(x) = 0.
-- `frottement_colebrook()` : coefficient de frottement d'une conduite
+- `bissection()`, `point_fixe()`, `newton()`, `secante()` : four methods to solve f(x) = 0.
+- `frottement_colebrook()` : friction factor of a pipe
   (équation de Colebrook-White).
-- `perte_de_charge()` : perte de charge de la conduite (Darcy-Weisbach).
-- `reynolds()`, `colebrook_g()`, `colebrook_dg()` : fonctions utilitaires.
+- `perte_de_charge()` : head loss in the pipe (Darcy-Weisbach).
+- `reynolds()`, `colebrook_g()`, `colebrook_dg()` : Utility functionc.
 
 ## Installation
 
 ```r
-# depuis le fichier .tar.gz fourni
+# from the provided .tar.gz fourni
 install.packages("sentimia_0.1.0.tar.gz", repos = NULL, type = "source")
 ```
 
@@ -28,13 +26,13 @@ library(sentimia)
 
 newton(function(x) x^2 - 2, function(x) 2 * x, 1)
 
-# Conduite d'acier de 100 m, diamètre 10 cm, eau à 1 m/s
+# steel pipe de 100 m, diameter 10 cm, eau à 1 m/s
 perte_de_charge(D = 0.10, L = 100, V = 1)
 ```
 
 ## Documentation
 
-- Aide de chaque fonction : `?newton`, `?frottement_colebrook`, ...
-- Guide d'utilisation : `vignette("introduction", package = "sentimia")`
-- Scripts de l'exposé : dossier `inst/scripts/`
+- help for each : `?newton`, `?frottement_colebrook`, ...
+- User guide : `vignette("introduction", package = "sentimia")`
+- Presentation scripts : dossier `inst/scripts/`
 # sentimia
